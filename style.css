@@ -39,6 +39,21 @@ nav ul li.hover:hover{
     background:rgb(250, 176, 58);
     transition: 0.3s;
 }
+.disclaimer{
+    text-align: center;
+    padding:10px;
+    color: red;
+    font-size: 27px;
+    background:yellow;
+    margin:10px 0px;
+    position: absolute;
+    top:30%;
+    width:100%;
+    cursor: pointer;
+}
+.disclaimer span{
+    font-size: 18px;
+}
 main{
     margin:auto;
     display:flex;

@@ -14,17 +14,18 @@ $shan = $("#shan");
 $tanintharyi = $("#tanintharyi");
 $kachin = $("#kachin");
 $sagaing = $("#sagaing");
+$disclaimer = $('.disclaimer');
 var clickCtrl = [];
 
 const statesObj = {
     kaya: {
-        contactArr: '_kayahState'
+        contactArr: []
     },
     kayin: {
-        contactArr: '_kayinState'
+        contactArr: []
     }, 
     mandalay: {
-        contactArr: '_mandalayState'
+        contactArr: []
     },
     bago: {
         contactArr: [
@@ -35,40 +36,45 @@ const statesObj = {
         ]
     },
     yangon: {
-        contactArr: '_yangonState'
+        contactArr: []
     },
     mon: {
-        contactArr: '_monState'
+        contactArr: []
     },
     rakhine: {
-        contactArr: '_rakhineState'
+        contactArr: []
     },
     chin: {
-        contactArr: '_chinState'
+        contactArr: []
     },
     ayeyarwady: {
-        contactArr: '_ayeyarwadyState'
+        contactArr: []
     },
     magway: {
-        contactArr: '_magwayState'
+        contactArr: []
     },
     shan: {
-        contactArr: '_shanState'
+        contactArr: []
     },
     tanintharyi: {
-        contactArr: '_tanintharyiState'
+        contactArr: []
     },
     kachin: {
-        contactArr: '_kachinState'
+        contactArr: []
     },
     sagaing: {
-        contactArr: '_sagaingState'
+        contactArr: []
     }
 };
 
 (function () {
     $nav.hide();            //might show later
-    $section.show();        //hide the display area.
+    $section.hide();        //hide the display area.
+
+    $disclaimer.on('click touchend', (e)=>{
+        e.preventDefault();
+        $disclaimer.hide();
+    })
 
     $aside.on('click touchend', (e)=>{
         e.preventDefault();
