@@ -29,7 +29,9 @@ const statesObj = {
     bago: {
         contactArr: [
             ['Save The Trees', 'Organisation', 'ပဲခူးမြို့နယ်', 'တောင်ငူမြို့', '09 256 666 575', 'https://www.facebook.com/savethetreesrescue'],
-            ['Angel', 'Organisation', 'ပဲခူးမြို့နယ်', 'တောင်ငူမြို့', '09 774 696 203', 'https://www.facebook.com/profile.php?id=100008111537411']
+            ['Angel', 'Organisation', 'ပဲခူးမြို့နယ်', 'တောင်ငူမြို့', '09 774 696 203', 'https://www.facebook.com/profile.php?id=100008111537411'],
+            ['Taungoo Rescuse', 'Organisation', 'ပဲခူးမြို့နယ်', 'တောင်ငူမြို့', '09-882211749', 'https://www.facebook.com/profile.php?id=100088687106873'], //work for more contact infos
+            ['မေတ္တာရှင်အသင်း', 'Organisation', 'ပဲခူးမြို့နယ်', 'တောင်ငူမြို့', '09428155773', 'https://www.facebook.com/profile.php?id=100087020120740']
         ]
     },
     yangon: {
@@ -66,7 +68,7 @@ const statesObj = {
 
 (function () {
     $nav.hide();            //might show later
-    $section.hide();        //hide the display area.
+    $section.show();        //hide the display area.
 
     $aside.on('click touchend', (e)=>{
         e.preventDefault();
@@ -107,13 +109,13 @@ function showContacts(contactArr){
         orgRowDIV.setAttribute('class', 'org-row');
         
         const orgNameDIV = document.createElement('div');
-        orgNameDIV.setAttribute('class', 'org-name');
+        orgNameDIV.setAttribute('class', 'org-name row-data');
 
         const orgLocationDIV = document.createElement('div');
-        orgLocationDIV.setAttribute('class', 'org-location');
+        orgLocationDIV.setAttribute('class', 'org-location row-data');
 
         const orgContactInfoDIV = document.createElement('div');
-        orgContactInfoDIV.setAttribute('class', 'org-contact-info');
+        orgContactInfoDIV.setAttribute('class', 'org-contact-info row-data');
 
         const contactInfoAnchor = document.createElement('a');
         contactInfoAnchor.setAttribute('href', 'tel:' + contactArr[i][4]);

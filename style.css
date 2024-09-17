@@ -69,27 +69,28 @@ section{
 }
 .org{
     display: block;
-    background:#f0942b2a;
-    padding:10px;
+    overflow: auto;
+    max-height: 600px;
 }
 .org-row{
     display: flex;
-    flex-direction: column;
-    padding:10px 15px;
-    border:1px solid rgba(187, 187, 187, 0.754);
-    margin-bottom:5px;
 }
-.org-name{
-    font-size: 24px;
-    font-weight:500;
+.org-row .row-head {
+    background:rgb(251, 244, 244);
+    font-weight: 700;
+    font-size: 18px;
 }
-.org-location{
-    font-size: 14px;
-    color: grey;
-    padding:5px 0;
+.org-name, .org-location, .org-contact-info{
+    flex:1;
+    text-align: center;
+    border:1px solid;
+    padding:15px 0;
 }
-.org-contact-info{
-    padding-top:5px;
+.org-location, .org-contact-info {
+    border-left:0;
+}
+.org-row .row-data{
+    border-top:0px;
 }
 @media (max-width:700px){
     header h1{
