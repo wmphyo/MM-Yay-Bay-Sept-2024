@@ -40,16 +40,23 @@ nav ul li.hover:hover{
     transition: 0.3s;
 }
 .disclaimer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     padding:10px;
     color: red;
-    font-size: 27px;
+    font-size: 33px;
     background:yellow;
     margin:10px 0px;
     position: absolute;
     top:30%;
     width:100%;
+    height:300px;
     cursor: pointer;
+}
+.disclaimer div{
+    margin-bottom: 20px;
 }
 .disclaimer span{
     font-size: 18px;
@@ -62,7 +69,7 @@ main{
     gap:2%;
 }
 aside{
-    flex-basis: 32%;
+    flex-basis: 25%;
 }
 aside svg{
     /* to center svg*/
@@ -106,6 +113,7 @@ section{
 }
 .org-row .row-data{
     border-top:0px;
+    text-wrap: wrap;
 }
 @media (max-width:700px){
     header h1{
@@ -113,5 +121,11 @@ section{
     }
     main{
         flex-direction: column;
+    }
+    .disclaimer {
+        font-size: 24px;
+    }
+    .disclaimer span{
+        font-size: 12px;
     }
 }
